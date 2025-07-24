@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.active-tab {
+  position: relative;
+  background-color: #f3f3f3;
+  transition: background-color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+
+.active-tab-dark {
+  position: relative;
+  background-color: #323232;
+  transition: background-color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+
+.active-tab::before {
+  content: "";
+  position: absolute;
+  left: -0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 16px;
+  background-color: #1c1c1c;
+  border-radius: 25%;
+}
+
+.active-tab-dark::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 16px;
+  background-color: #c6c7f8;
+  border-radius: 25%;
+}
