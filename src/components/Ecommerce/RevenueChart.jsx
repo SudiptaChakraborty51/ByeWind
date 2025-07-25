@@ -35,7 +35,7 @@ const RevenueChart = () => {
     <div
       className={`col-span-full md:col-span-3 ${
         theme ? "bg-[#FFFFFF1A]" : "bg-[#F7F9FB]"
-      } rounded-2xl p-5 animate-fade`}
+      } rounded-2xl p-6 animate-fade`}
     >
       <div className="block md:flex items-center">
         <h6
@@ -61,7 +61,7 @@ const RevenueChart = () => {
                 className={`${theme ? d?.darkColor : d?.color}`}
               />
               <p
-                class={`text-xs font-normal p-0.5 ${
+                className={`text-xs font-normal p-0.5 ${
                   theme ? "text-[#FFFFFF]" : "text-[#1C1C1C]"
                 }`}
               >
@@ -71,7 +71,7 @@ const RevenueChart = () => {
           ))}
         </div>
       </div>
-      
+
       <div className="h-[90%] w-full mt-4">
         <ResponsiveContainer width="100%" height={232}>
           <LineChart width={"100%"} height={232} data={LineData}>
