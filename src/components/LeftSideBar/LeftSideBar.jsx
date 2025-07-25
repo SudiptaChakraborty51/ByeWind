@@ -13,8 +13,8 @@ import {
   PiChatsTeardropDuotone,
 } from "react-icons/pi";
 import { LiaAngleRightSolid } from "react-icons/lia";
-import MenuItem from "./LeftSideBar/MenuItem";
-import userProfile from "../assets/userProfile.png";
+import MenuItem from "./MenuItem";
+import userProfile from "../../assets/userProfile.png";
 
 const LeftSideBar = () => {
   const theme = useSelector((state) => state.theme.theme);
