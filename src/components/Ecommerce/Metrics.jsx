@@ -90,11 +90,11 @@ const Metrics = () => {
           Projections vs Actuals
         </h6>
         <div className="h-[90%] w-full mt-4">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart width={"100%"} height={"100%"} data={BarData}>
+          <ResponsiveContainer width="100%" height={180}>
+            <BarChart width={"100%"} height={180} data={BarData}>
               <CartesianGrid
                 stroke={`${theme ? "#FFFFFF66" : "#1C1C1C66"}`}
-                strokeWidth={0.3}
+                strokeOpacity={0.2}
                 vertical={false}
               />
               <XAxis
@@ -124,12 +124,10 @@ const Metrics = () => {
                 contentStyle={{
                   borderRadius: "10px",
                   border: "none",
-                  color: `${theme ? "#FFFFFF" : "#1C1C1C"}`,
                   background: `${theme ? "#1C1C1C" : "#f7f9fb"}`,
                   fontFamily: "var(--inter-font)",
                 }}
                 itemStyle={{
-                  color: `${theme ? "#FFFFFF" : "#1C1C1C"}`,
                   fontFamily: "var(--inter-font)",
                   fontSize: "12px",
                   fontWeight: "400",
