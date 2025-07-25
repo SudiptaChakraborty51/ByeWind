@@ -45,3 +45,62 @@ export const BarData = [
   { name: "2023-05-01", actual: 15, projection: 4 },
   { name: "2023-06-01", actual: 21, projection: 5 },
 ];
+
+export const LineData = [
+  {
+    name: "2024-01-20",
+    previous: 8,
+    currentPredicted: null,
+    currentActual: 12,
+  },
+  {
+    name: "2024-02-01",
+    previous: 16,
+    currentPredicted: null,
+    currentActual: 9,
+  },
+  {
+    name: "2024-03-01",
+    previous: 18,
+    currentPredicted: null,
+    currentActual: 10,
+  },
+
+  {
+    name: "2024-04-01",
+    previous: 14,
+    currentPredicted: 18,
+    currentActual: 18,
+  },
+  {
+    name: "2024-05-01",
+    previous: 12,
+    currentPredicted: 21,
+    currentActual: null,
+  },
+  {
+    name: "2024-06-01",
+    previous: 20,
+    currentPredicted: 16,
+    currentActual: null,
+  },
+];
+
+export const revenueLocations = [
+  {
+    place: "New York",
+    revenue: 72,
+  },
+  {
+    place: "San Francisco",
+    revenue: 39,
+  },
+  {
+    place: "Sydney",
+    revenue: 25,
+  },
+  {
+    place: "Singapore",
+    revenue: 61,
+  },
+];

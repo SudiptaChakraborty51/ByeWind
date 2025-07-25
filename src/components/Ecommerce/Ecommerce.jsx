@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Metrics from "./Metrics";
+import RevenueChart from "./RevenueChart";
+import RevenueLocation from "./RevenueLocation";
 
 const Ecommerce = () => {
   const theme = useSelector((state) => state.theme.theme);
@@ -15,6 +17,10 @@ const Ecommerce = () => {
         eCommerce
       </h2>
       <Metrics />
+      <main className="grid gap-5 grid-cols-1 md:grid-cols-4">
+        <RevenueChart />
+        <RevenueLocation />
+      </main>
     </div>
   );
 };
