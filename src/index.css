@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 .active-tab {
   position: relative;
   background-color: #f3f3f3;

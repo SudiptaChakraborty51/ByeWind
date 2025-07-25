@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LeftSideBar from "./components/LeftSideBar/LeftSideBar";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import { useSelector } from "react-redux";
 
 function App() {
