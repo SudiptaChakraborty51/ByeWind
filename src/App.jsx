@@ -1,31 +1,24 @@
-import { useState } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LeftSideBar from "./components/LeftSideBar/LeftSideBar";
-import Header from "./components/Header/Header";
-import { useSelector } from "react-redux";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Ecommerce from "./components/Ecommerce/Ecommerce";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+import Orders from "./components/Order/Orders";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  const theme = useSelector((state) => state.theme.theme);
-  return (
-    <>
-      <BrowserRouter>
-        <section
-          className={`font-Inter scroll-smooth grid grid-cols-12 items-start 
-          } h-full animate-fade ${theme ? "bg-[#1C1C1C]" : "bg-[#FFFFFF]"}`}
-        >
-          <LeftSideBar />
-          <div
-            className={`col-span-12 xl:col-span-8 border-x-[1px] ${
-              theme ? "border-x-[#FFFFFF33]" : "border-x-[#1C1C1C1A]"
-            }`}
-          >
-            <Header />
-          </div>
-        </section>
-      </BrowserRouter>
-    </>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { index: true, element: <Ecommerce /> },
+        { path: "orders", element: <Orders /> },
+        { path: "*", element: <PageNotFound /> },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
