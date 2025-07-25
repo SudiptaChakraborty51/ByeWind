@@ -39,3 +39,10 @@ body {
   background-color: #c6c7f8;
   border-radius: 25%;
 }
+
+.recharts-area:focus,
+.recharts-tooltip-wrapper:focus,
+.recharts-cartesian-grid:focus,
+.recharts-surface:focus {
+  outline: none;
+}
