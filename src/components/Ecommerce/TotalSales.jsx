@@ -85,7 +85,7 @@ const TotalSales = () => {
               <GoDotFill
                 size={14}
                 strokeWidth={1.5}
-                className={`text-[${theme ? item?.darkColor : item?.color}]`}
+                style={{ color: theme ? item?.darkColor : item?.color }}
               />
               <p
                 className={`text-xs font-normal ${
