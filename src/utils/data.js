@@ -1,3 +1,20 @@
+import {
+  PiBugBeetleLight,
+  PiUserLight,
+  PiBroadcastLight,
+} from "react-icons/pi";
+import user1 from "../assets/user1.png";
+import user2 from "../assets/user2.png";
+import user3 from "../assets/user3.png";
+import user4 from "../assets/user4.png";
+import user5 from "../assets/user5.png";
+import profile1 from "../assets/profile1.png";
+import profile2 from "../assets/profile2.png";
+import profile3 from "../assets/profile3.png";
+import profile4 from "../assets/profile4.png";
+import profile5 from "../assets/profile5.png";
+import profile6 from "../assets/profile6.png";
+
 export const statusCard = [
   {
     title: "Customers",
@@ -162,5 +179,87 @@ export const totalSales = [
     price: 48.96,
     color: "#B1E3FF",
     darkColor: "#B1E3FF",
+  },
+];
+
+export const notifications = [
+  {
+    message: "You have a bug that needs to be fixed.",
+    time: "Just now",
+    icon: PiBugBeetleLight,
+    color: "bg-[#E3F5FF]",
+  },
+  {
+    message: "New user registered",
+    time: "59 minutes ago",
+    icon: PiUserLight,
+    color: "bg-[#E5ECF6]",
+  },
+  {
+    message: "You have a bug that needs to be fixed.",
+    time: "12 hours ago",
+    icon: PiBugBeetleLight,
+    color: "bg-[#E3F5FF]",
+  },
+  {
+    message: "Andi Lane subscribed to you",
+    time: "Today, 11:59 AM",
+    icon: PiBroadcastLight,
+    color: "bg-[#E5ECF6]",
+  },
+];
+
+export const activities = [
+  {
+    message: "You have a bug that needs to be fixed.",
+    time: "Just now",
+    image: user1,
+  },
+  {
+    message: "Released a new version",
+    time: "59 minutes ago",
+    image: user2,
+  },
+  {
+    message: "Submitted a bug",
+    time: "12 hours ago",
+    image: user3,
+  },
+  {
+    message: "Modified A data in Page X",
+    time: "Today, 11:59 AM",
+    image: user4,
+  },
+  {
+    message: "Deleted a page in Project X",
+    time: "Feb 2, 2023",
+    image: user5,
+  },
+];
+
+export const contacts = [
+  {
+    name: "Natali Craig",
+    image: profile1,
+  },
+  {
+    name: "Drew Cano",
+    image: profile2,
+  },
+  {
+    name: "Orlando Diggs",
+    image: profile3,
+  },
+  {
+    name: "Andi Lane",
+    image: profile4,
+  },
+  {
+    name: "Kate Morrison",
+    image: profile5,
+  },
+  {
+    name: "Koray Okumus",
+    image: profile6,
   },
 ];

@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import LeftSideBar from "../LeftSideBar/LeftSideBar";
 import Header from "../Header/Header";
 import { useSelector } from "react-redux";
+import RightSideBar from "../RightSideBar/RightSideBar";
 
 const Layout = () => {
   const theme = useSelector((state) => state.theme.theme);
@@ -23,6 +24,7 @@ const Layout = () => {
           <Outlet />
         </div>
       </div>
+      <RightSideBar />
     </section>
   );
 };

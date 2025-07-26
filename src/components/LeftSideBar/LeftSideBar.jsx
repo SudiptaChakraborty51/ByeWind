@@ -99,7 +99,7 @@ const LeftSideBar = () => {
   };
 
   return (
-    <section className="hidden md:col-span-2 py-5 px-4 xl:grid gap-y-4 sticky top-0 animate-fade">
+    <section className="hidden md:col-span-2 py-5 px-4 xl:grid gap-y-4 animate-fade">
       <figure className="flex items-center">
         <img
           src={userProfile}
@@ -130,7 +130,7 @@ const LeftSideBar = () => {
                 }`}
               ></div>
               <p
-                className={`flex justify-center text-sm font-normal  text-primary pl-2 ${
+                className={`flex justify-center text-sm font-normal pl-2 ${
                   theme ? "text-[#FFFFFF]" : "[#1C1C1C]"
                 }`}
               >

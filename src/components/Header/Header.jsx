@@ -31,14 +31,16 @@ const Header = () => {
   return (
     <div
       className={`flex items-center justify-between border-b-[1px] ${
-        theme ? "border-b-[#FFFFFF33] bg-[#1C1C1C]" : "border-b-[#1C1C1C1A] bg-[#FFFFFF]"
-      } p-4 z-10 sticky top-0 transition-transform duration-500`}
+        theme
+          ? "border-b-[#FFFFFF33] bg-[#1C1C1C]"
+          : "border-b-[#1C1C1C1A] bg-[#FFFFFF]"
+      } p-4 z-10 transition-transform duration-500`}
     >
       <div className="flex items-center gap-2 md:gap-4">
         <PiSidebarLight
           size={24}
           strokeWidth={1.5}
-          className={`text-primary p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
@@ -47,7 +49,7 @@ const Header = () => {
         <PiStarLight
           size={24}
           strokeWidth={1.5}
-          className={`text-primary p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
@@ -99,7 +101,7 @@ const Header = () => {
         <PiClockCounterClockwiseLight
           size={24}
           strokeWidth={1.5}
-          className={`text-primary p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
@@ -108,7 +110,7 @@ const Header = () => {
         <PiBellLight
           size={24}
           strokeWidth={1.5}
-          className={`text-primary p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
@@ -117,7 +119,7 @@ const Header = () => {
         <PiSidebarLight
           size={24}
           strokeWidth={1.5}
-          className={`text-primary p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
