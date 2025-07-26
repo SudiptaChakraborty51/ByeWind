@@ -3,6 +3,7 @@ import LeftSideBar from "../LeftSideBar/LeftSideBar";
 import Header from "../Header/Header";
 import { useSelector } from "react-redux";
 import RightSideBar from "../RightSideBar/RightSideBar";
+import { ToastContainer } from "react-toastify";
 
 const Layout = () => {
   const theme = useSelector((state) => state.theme.theme);
@@ -31,6 +32,7 @@ const Layout = () => {
         </div>
       </div>
       {currentPath[0] !== "orders" && <RightSideBar />}
+      <ToastContainer />
     </section>
   );
 };
