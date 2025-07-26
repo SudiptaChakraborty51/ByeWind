@@ -1,11 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const DashboardRouter = () => {
   const navigate = useNavigate();
   const theme = useSelector((state) => state.theme.theme);
-  const currentPath = window.location.pathname
+  const location = useLocation();
+  const currentPath = location.pathname
     ?.split("/")
     .filter((path) => path !== "");
 

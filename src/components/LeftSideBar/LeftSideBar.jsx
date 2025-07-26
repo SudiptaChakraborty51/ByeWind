@@ -11,6 +11,7 @@ import {
   PiUsersThreeDuotone,
   PiNotebookDuotone,
   PiChatsTeardropDuotone,
+  PiListBullets
 } from "react-icons/pi";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import MenuItem from "./MenuItem";
@@ -43,6 +44,7 @@ const LeftSideBar = () => {
 
   let dashboards = [
     { label: "Default", icon: PiChartPieSliceLight, path: "" },
+    { label: "Orders", icon: PiListBullets, path: "orders" },
     { label: "eCommerce", icon: PiShoppingBagOpen, path: "ecommerce" },
     { label: "Projects", icon: PiFolder, path: "projects" },
     {
