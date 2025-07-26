@@ -57,7 +57,7 @@ const TotalSales = () => {
                 cy="50%"
                 startAngle={30}
                 endAngle={-330}
-                innerRadius={35}
+                innerRadius={37}
                 outerRadius={60}
                 dataKey="price"
                 strokeWidth={4}
