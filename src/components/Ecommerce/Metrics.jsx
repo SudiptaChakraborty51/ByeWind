@@ -12,9 +12,11 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import moment from "moment/moment";
+import { useNavigate } from "react-router-dom";
 
 const Metrics = () => {
   const theme = useSelector((state) => state.theme.theme);
+  const navigate = useNavigate();
 
   return (
     <section className="grid grid-cols-1 xl:grid-cols-2 gap-4">
@@ -24,9 +26,14 @@ const Metrics = () => {
           return (
             <div
               key={index}
+              onClick={() => {
+                if (card?.title === "Orders") {
+                  navigate("/orders");
+                }
+              }}
               className={`${
                 theme ? card?.darkBg : card?.bg
-              } rounded-2xl gap-2 p-6 flex justify-around flex-col`}
+              } cursor-pointer rounded-2xl gap-2 p-6 flex justify-around flex-col`}
             >
               <h6
                 className={`${

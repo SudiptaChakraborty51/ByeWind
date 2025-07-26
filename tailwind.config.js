@@ -7,9 +7,6 @@ export default {
       fontFamily: {
         Inter: ["Inter", "sans-serif"],
       },
-      colors: {
-        primary: "#1C1C1C",
-      },
       animation: {
         fade: "fadeIn .5s ease-in-out",
       },

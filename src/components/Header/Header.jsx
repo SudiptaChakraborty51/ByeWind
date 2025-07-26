@@ -11,6 +11,7 @@ import {
 } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
 import DashboardRouter from "./DashboardRouter";
+import userProfile from "../../assets/userProfile.png";
 
 const Header = () => {
   const theme = useSelector((state) => state.theme.theme);
@@ -37,10 +38,22 @@ const Header = () => {
       } p-4 z-10 transition-transform duration-500`}
     >
       <div className="flex items-center gap-2 md:gap-4">
+        <figure className="flex items-center lg:hidden">
+          <img
+            src={userProfile}
+            alt=""
+            className="flex w-[20px] h-[20px] rounded-full object-cover"
+          />
+          <h1
+            className={`text-sm font-normal ps-2 ${theme && "text-[#FFFFFF]"}`}
+          >
+            ByeWind
+          </h1>
+        </figure>
         <PiSidebarLight
           size={24}
           strokeWidth={1.5}
-          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`hidden md:flex p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
@@ -49,7 +62,7 @@ const Header = () => {
         <PiStarLight
           size={24}
           strokeWidth={1.5}
-          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`hidden md:flex p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
@@ -60,7 +73,7 @@ const Header = () => {
 
       <div className="md:flex items-center gap-2 md:gap-4">
         <div
-          className={`flex items-center ${
+          className={`hidden md:flex flex items-center ${
             theme ? "bg-[#FFFFFF1A]" : "bg-[#1C1C1C0D]"
           } gap-1 px-2 py-1 rounded-lg`}
         >
@@ -101,7 +114,7 @@ const Header = () => {
         <PiClockCounterClockwiseLight
           size={24}
           strokeWidth={1.5}
-          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`hidden md:flex p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
@@ -110,7 +123,7 @@ const Header = () => {
         <PiBellLight
           size={24}
           strokeWidth={1.5}
-          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`hidden md:flex p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
@@ -119,7 +132,7 @@ const Header = () => {
         <PiSidebarLight
           size={24}
           strokeWidth={1.5}
-          className={`p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
+          className={`hidden md:flex p-0.5 rounded-md cursor-pointer transition-transform hover:scale-105 duration-500 ease-in-out ${
             theme
               ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
               : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
