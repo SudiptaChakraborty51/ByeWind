@@ -11,7 +11,12 @@ import { GoDotFill } from "react-icons/go";
 import { MdCheckBox } from "react-icons/md";
 import { toast } from "react-toastify";
 
-const OrderTable = ({ searchedOrder, isSortByStatus }) => {
+const OrderTable = ({
+  searchedOrder,
+  isSortByStatus,
+  currentPage,
+  setCurrentPage = () => {},
+}) => {
   const theme = useSelector((state) => state.theme.theme);
   const [state, setState] = useState({
     checkedIDs: [],
@@ -19,6 +24,8 @@ const OrderTable = ({ searchedOrder, isSortByStatus }) => {
   });
   const [ordersData, setOrdersData] = useState(ordersList);
   const [filteredOrders, setFilteredOrders] = useState([]);
+  const itemsPerPage = 10;
+  const totalPages = 5;
 
   const statusColor = {
     "In Progress": "#8A8CD9",
@@ -80,14 +87,27 @@ const OrderTable = ({ searchedOrder, isSortByStatus }) => {
       Complete: 4,
       Rejected: 5,
     };
+
     if (!searchedOrder) {
       if (isSortByStatus) {
         const sorted = [...ordersData]?.sort((a, b) => {
           return statusPriority[a.status] - statusPriority[b.status];
         });
-        setFilteredOrders(sorted);
+        const sliced = [...sorted]?.slice(0, totalPages * itemsPerPage);
+
+        const paginated = sliced?.slice(
+          (currentPage - 1) * itemsPerPage,
+          currentPage * itemsPerPage
+        );
+        setFilteredOrders(paginated);
       } else {
-        setFilteredOrders(ordersData);
+        const sliced = [...ordersData]?.slice(0, totalPages * itemsPerPage);
+
+        const paginated = sliced?.slice(
+          (currentPage - 1) * itemsPerPage,
+          currentPage * itemsPerPage
+        );
+        setFilteredOrders(paginated);
       }
     } else {
       const filtered = ordersData?.filter(
@@ -101,12 +121,24 @@ const OrderTable = ({ searchedOrder, isSortByStatus }) => {
         const sorted = filtered?.sort((a, b) => {
           return statusPriority[a.status] - statusPriority[b.status];
         });
-        setFilteredOrders(sorted);
+        const sliced = [...sorted]?.slice(0, totalPages * itemsPerPage);
+
+        const paginated = sliced?.slice(
+          (currentPage - 1) * itemsPerPage,
+          currentPage * itemsPerPage
+        );
+        setFilteredOrders(paginated);
       } else {
-        setFilteredOrders(filtered);
+        const sliced = [...filtered]?.slice(0, totalPages * itemsPerPage);
+
+        const paginated = sliced?.slice(
+          (currentPage - 1) * itemsPerPage,
+          currentPage * itemsPerPage
+        );
+        setFilteredOrders(paginated);
       }
     }
-  }, [searchedOrder, ordersData, isSortByStatus]);
+  }, [searchedOrder, ordersData, isSortByStatus, currentPage]);
 
   return (
     <div className="relative overflow-x-auto sm:rounded-lg">

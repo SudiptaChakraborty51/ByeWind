@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { PiPlus, PiFunnelSimple, PiArrowsDownUp } from "react-icons/pi";
+import { LiaAngleLeftSolid, LiaAngleRightSolid } from "react-icons/lia";
 import { CiSearch } from "react-icons/ci";
 import OrderTable from "./OrderTable";
 
@@ -10,6 +11,8 @@ const Orders = () => {
     searchedOrder: "",
     isSortByStatus: false,
   });
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 5;
 
   const handleSearchedOrder = (e) => {
     setState((prev) => {
@@ -99,7 +102,60 @@ const Orders = () => {
       <OrderTable
         searchedOrder={state?.searchedOrder}
         isSortByStatus={state?.isSortByStatus}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
       />
+      <div className="flex items-center gap-2 justify-center md:justify-end">
+        <LiaAngleLeftSolid
+          size={24}
+          strokeWidth={1.5}
+          className={`${
+            currentPage === 1
+              ? "cursor-not-allowed"
+              : `cursor-pointer ${
+                  theme ? "hover:bg-[#FFFFFF1A]" : "hover:bg-[#1C1C1C0D]"
+                }`
+          }
+           p-1 rounded-md transition-transform hover:scale-105 duration-500 ease-in-out ${
+             theme ? "text-[#FFFFFF]" : "text-[#1C1C1C]"
+           }`}
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+        />
+        {[...Array(totalPages)].map((d, i) => (
+          <p
+            key={i}
+            className={`${
+              currentPage === i + 1
+                ? `${theme ? "bg-[#FFFFFF1A]" : "bg-[#1C1C1C0D]"}`
+                : ""
+            } cursor-pointer text-sm font-normal w-[24px] h-[24px] rounded-md flex items-center justify-center transition-transform hover:scale-105 duration-500 ease-in-out ${
+              theme
+                ? "text-[#FFFFFF] hover:bg-[#FFFFFF1A]"
+                : "text-[#1C1C1C] hover:bg-[#1C1C1C0D]"
+            }`}
+            onClick={() => setCurrentPage(i + 1)}
+          >
+            {i + 1}
+          </p>
+        ))}
+        <LiaAngleRightSolid
+          size={24}
+          strokeWidth={1.5}
+          className={`${
+            totalPages === currentPage
+              ? "cursor-not-allowed"
+              : `cursor-pointer ${
+                  theme ? "hover:bg-[#FFFFFF1A]" : "hover:bg-[#1C1C1C0D]"
+                }`
+          }
+           p-1 rounded-md transition-transform hover:scale-105 duration-500 ease-in-out ${
+             theme ? "text-[#FFFFFF]" : "text-[#1C1C1C]"
+           }`}
+          onClick={() =>
+            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+          }
+        />
+      </div>
     </main>
   );
 };
