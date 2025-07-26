@@ -15,6 +15,7 @@ A responsive, interactive dashboard application built with ReactJS that showcase
 - React-icons
 - React-toastify
 - moment.js
+- Vite + Vercel
 
 
 ## **Features :**
@@ -26,3 +27,13 @@ A responsive, interactive dashboard application built with ReactJS that showcase
 - Order-list table with pagination
 - Searching, Filtering, Sorting by status, Selection by checkbox
 - Error Page
+- Toast messages
+
+## How to install and run locally?
+
+```
+$ git clone https://github.com/SudiptaChakraborty51/ByeWind.git
+$ cd byewind
+$ npm install
+$ npm run dev
+```
