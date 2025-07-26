@@ -14,7 +14,7 @@ const Layout = () => {
 
   return (
     <section
-      className={`font-Inter scroll-smooth grid grid-cols-12 items-start h-full animate-fade ${
+      className={`min-h-screen w-full font-Inter scroll-smooth grid grid-cols-12 items-start animate-fade ${
         theme ? "bg-[#1C1C1C]" : "bg-[#FFFFFF]"
       }`}
     >
@@ -24,7 +24,7 @@ const Layout = () => {
           currentPath[0] !== "orders" ? "xl:col-span-8" : "xl:col-span-10"
         } border-x-[1px] ${
           theme ? "border-x-[#FFFFFF33]" : "border-x-[#1C1C1C1A]"
-        }`}
+        } min-h-screen`}
       >
         <Header />
         <div className="p-4">
